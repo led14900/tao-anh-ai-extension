@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tạo Ảnh AI - Hướng Dẫn Cài Đặt Và Sử Dụng</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f3ee;
+      --paper: #fffdf8;
+      --text: #221b14;
+      --muted: #6c6257;
+      --line: #e4dacb;
+      --gold: #b9872c;
+      --gold-dark: #7a5319;
+      --soft: #fbf4e7;
+      --warn: #fff3cd;
+      --warn-line: #e0b94b;
+      --ok: #edf7ee;
+      --ok-line: #7db47e;
+      --shadow: 0 18px 55px rgba(50, 35, 16, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--gold-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(1020px, calc(100% - 32px));
+      margin: 32px auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    header {
+      padding: 36px 42px 30px;
+      background:
+        linear-gradient(135deg, rgba(185, 135, 44, 0.18), rgba(255, 253, 248, 0.72)),
+        var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--gold-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+    }
+
+    nav {
+      padding: 28px 24px;
+      border-right: 1px solid var(--line);
+      background: #fbf8f1;
+    }
+
+    nav .nav-title {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      display: block;
+      padding: 9px 0;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(228, 218, 203, 0.7);
+    }
+
+    main {
+      padding: 28px 42px 48px;
+    }
+
+    section {
+      scroll-margin-top: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child {
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul, ol {
+      margin: 10px 0 10px 24px;
+      padding: 0;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    code {
+      padding: 2px 6px;
+      background: #f1e8d9;
+      border-radius: 5px;
+      color: #4b3518;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.95em;
+    }
+
+    pre {
+      overflow-x: auto;
+      margin: 14px 0;
+      padding: 14px 16px;
+      background: #211a13;
+      border-radius: 10px;
+      color: #fff7e8;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 14px;
+      line-height: 1.55;
+      white-space: pre-wrap;
+    }
+
+    .note,
+    .tip,
+    .warning {
+      margin: 16px 0;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+    }
+
+    .note {
+      background: var(--soft);
+    }
+
+    .tip {
+      background: var(--ok);
+      border-color: var(--ok-line);
+    }
+
+    .warning {
+      background: var(--warn);
+      border-color: var(--warn-line);
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .box {
+      padding: 16px;
+      background: #fffaf0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .box strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--gold-dark);
+    }
+
+    table {
+      width: 100%;
+      margin: 16px 0;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f4ead8;
+    }
+
+    footer {
+      padding: 24px 42px;
+      background: #211a13;
+      color: #f8ead4;
+    }
+
+    footer a {
+      color: #ffd88a;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      header,
+      main,
+      footer {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .content {
+        display: block;
+      }
+
+      nav {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <p class="eyebrow">Hướng dẫn cho người dùng</p>
+      <h1>Tạo Ảnh AI</h1>
+      <p class="lead">
+        Hướng dẫn cài đặt và sử dụng extension Tạo Ảnh AI trên Google Chrome để gửi prompt tạo ảnh hàng loạt vào labs.google.
+      </p>
+    </header>
+
+    <div class="content">
+      <nav aria-label="Mục lục">
+        <p class="nav-title">Mục lục</p>
+        <a href="#prepare">1. Chuẩn bị</a>
+        <a href="#install">2. Cài đặt</a>
+        <a href="#open">3. Mở labs.google</a>
+        <a href="#interface">4. Giao diện</a>
+        <a href="#prompt">5. Nhập prompt</a>
+        <a href="#batch">6. Gửi hàng loạt</a>
+        <a href="#rewrite">7. AI Rewrite</a>
+        <a href="#update">8. Cập nhật/Gỡ</a>
+        <a href="#errors">9. Lỗi thường gặp</a>
+        <a href="#contact">10. Hỗ trợ</a>
+      </nav>
+
+      <main>
+        <section id="prepare">
+          <h2>1. Bạn cần chuẩn bị gì?</h2>
+          <p>Trước khi cài đặt, hãy chuẩn bị các mục sau:</p>
+          <ul>
+            <li>Máy tính có cài Google Chrome.</li>
+            <li>File <code>TaoAnhAI.zip</code> được gửi kèm.</li>
+            <li>Tài khoản Google có thể dùng trang <a href="https://labs.google/" target="_blank" rel="noopener">https://labs.google/</a>.</li>
+            <li>Gemini API Key nếu muốn dùng tính năng <code>AI rewrite</code>. Nếu chỉ gửi prompt tự động thì không cần API Key.</li>
+          </ul>
+          <div class="warning">
+            <strong>Lưu ý:</strong> Extension chỉ hoạt động tốt nhất trên trang <code>labs.google</code>. Nếu bạn đang mở trang khác, extension sẽ không tương thích hoàn toàn.
+          </div>
+        </section>
+
+        <section id="install">
+          <h2>2. Cài đặt extension vào Chrome</h2>
+
+          <h3>Bước 1: Giải nén file TaoAnhAI.zip</h3>
+          <ol>
+            <li>Tìm file <code>TaoAnhAI.zip</code> trên máy tính.</li>
+            <li>Nhấn chuột phải vào file đó.</li>
+            <li>Chọn <code>Extract All...</code> hoặc <code>Giải nén tất cả</code>.</li>
+            <li>Mở thư mục vừa được tạo ra sau khi giải nén.</li>
+            <li>Kiểm tra trong thư mục có file <code>manifest.json</code>.</li>
+          </ol>
+          <div class="note">
+            Khi Chrome yêu cầu chọn thư mục, hãy chọn đúng thư mục có file <code>manifest.json</code> ở bên trong.
+          </div>
+
+          <h3>Bước 2: Mở trang quản lý extension</h3>
+          <ol>
+            <li>Mở Google Chrome.</li>
+            <li>Bấm vào thanh địa chỉ phía trên.</li>
+            <li>Nhập <code>chrome://extensions</code> rồi nhấn <code>Enter</code>.</li>
+            <li>Bật công tắc <code>Developer mode</code> ở góc phải phía trên.</li>
+          </ol>
+          <p>Nếu Chrome đang dùng tiếng Việt, mục này có thể hiển thị là <code>Chế độ dành cho nhà phát triển</code>.</p>
+
+          <h3>Bước 3: Nạp extension</h3>
+          <ol>
+            <li>Bấm nút <code>Load unpacked</code>.</li>
+            <li>Chọn thư mục vừa giải nén ở Bước 1.</li>
+            <li>Bấm <code>Select Folder</code>.</li>
+            <li>Nếu cài đúng, bạn sẽ thấy extension <code>Tạo Ảnh AI</code> xuất hiện trong danh sách.</li>
+          </ol>
+
+          <h3>Bước 4: Ghim extension</h3>
+          <ol>
+            <li>Nhìn lên góc phải của Chrome.</li>
+            <li>Bấm biểu tượng mảnh ghép.</li>
+            <li>Tìm <code>Tạo Ảnh AI</code>.</li>
+            <li>Bấm biểu tượng ghim để đưa extension ra thanh công cụ.</li>
+          </ol>
+        </section>
+
+        <section id="open">
+          <h2>3. Mở trang tạo ảnh</h2>
+          <ol>
+            <li>Mở Chrome.</li>
+            <li>Truy cập <a href="https://labs.google/" target="_blank" rel="noopener">https://labs.google/</a>.</li>
+            <li>Đăng nhập tài khoản Google nếu được yêu cầu.</li>
+            <li>Mở đúng công cụ tạo ảnh hoặc trang Flow trong <code>labs.google</code>.</li>
+            <li>Chờ trang tải xong và đảm bảo bạn thấy ô nhập prompt.</li>
+            <li>Bấm icon <code>Tạo Ảnh AI</code> trên Chrome để mở bảng điều khiển bên cạnh.</li>
+          </ol>
+          <div class="tip">
+            Nếu bảng điều khiển chưa mở, hãy thử bấm lại icon extension hoặc tải lại trang <code>labs.google</code>.
+          </div>
+        </section>
+
+        <section id="interface">
+          <h2>4. Các phần chính trong extension</h2>
+          <div class="quick-grid">
+            <div class="box"><strong>Danh sách prompt</strong>Nơi nhập toàn bộ prompt muốn gửi.</div>
+            <div class="box"><strong>AI rewrite</strong>Dùng AI để viết lại prompt rõ hơn.</div>
+            <div class="box"><strong>Prompt sẽ gửi</strong>Xem trước prompt trước khi gửi.</div>
+            <div class="box"><strong>Mỗi prompt</strong>Chọn mỗi prompt được gửi bao nhiêu lần.</div>
+            <div class="box"><strong>Cách nhau</strong>Chọn thời gian nghỉ giữa hai lần gửi.</div>
+            <div class="box"><strong>Gửi vào labs.google</strong>Bắt đầu gửi prompt tự động.</div>
+          </div>
+        </section>
+
+        <section id="prompt">
+          <h2>5. Cách nhập prompt</h2>
+
+          <h3>Cách 1: Mỗi dòng là một prompt</h3>
+          <p>Cách này phù hợp khi prompt ngắn.</p>
+          <pre>Một biệt thự hiện đại giữa rừng thông, ánh sáng hoàng hôn
+Ảnh sản phẩm nước hoa đặt trên đá marble, ánh sáng studio
+Một robot thân thiện trong thành phố tương lai, phong cách điện ảnh</pre>
+          <p>Ví dụ trên sẽ được hiểu là 3 prompt.</p>
+
+          <h3>Cách 2: Prompt dài nhiều dòng</h3>
+          <p>Nếu một prompt cần viết nhiều dòng, hãy dùng một dòng chỉ có <code>---</code> để ngăn cách giữa các prompt.</p>
+          <pre>Một căn phòng khách tối giản
+Ánh sáng tự nhiên từ cửa sổ lớn
+Sofa trắng, vật liệu gỗ sáng
+---
+Một quán cà phê nhỏ trong hẻm
+Ánh sáng buổi sáng
+Không khí ấm áp, phong cách ảnh điện ảnh</pre>
+          <p>Ví dụ trên sẽ được hiểu là 2 prompt. Bạn cũng có thể dùng <code>===</code> thay cho <code>---</code>.</p>
+
+          <div class="note">
+            Sau khi nhập prompt, hãy nhìn phần <code>Prompt sẽ gửi</code> để kiểm tra extension đã tách đúng số prompt chưa.
+          </div>
+        </section>
+
+        <section id="batch">
+          <h2>6. Gửi prompt hàng loạt</h2>
+
+          <h3>Chọn số lần lặp</h3>
+          <p>Mục <code>Mỗi prompt</code> cho biết mỗi prompt sẽ được gửi bao nhiêu lần.</p>
+          <p>Ví dụ: có 5 prompt và chọn <code>3x</code> thì tổng số lượt gửi là 15 lượt.</p>
+          <p>Các lựa chọn thường có: <code>1x</code>, <code>2x</code>, <code>3x</code>, <code>5x</code>, <code>10x</code>.</p>
+
+          <h3>Chọn thời gian chờ</h3>
+          <p>Mục <code>Cách nhau</code> là thời gian nghỉ giữa hai lượt gửi.</p>
+          <p>Các lựa chọn thường có: <code>3s</code>, <code>5s</code>, <code>10s</code>, <code>20s</code>, <code>30s</code>, <code>45s</code>, <code>60s</code>.</p>
+          <div class="tip">
+            Nếu gửi nhiều prompt, nên chọn từ <code>30s</code> trở lên để trang có thời gian xử lý.
+          </div>
+
+          <h3>Bắt đầu gửi</h3>
+          <ol>
+            <li>Đảm bảo tab đang mở là <code>labs.google</code>.</li>
+            <li>Đảm bảo trên trang có ô nhập prompt.</li>
+            <li>Bấm <code>Gửi vào labs.google</code>.</li>
+            <li>Giữ nguyên tab đó trong lúc extension chạy.</li>
+          </ol>
+
+          <p>Trong lúc chạy, extension sẽ tự điền prompt, bấm nút tạo ảnh, chờ theo số giây đã chọn rồi chuyển sang prompt tiếp theo.</p>
+
+          <h3>Dừng khi đang chạy</h3>
+          <p>Khi extension đang gửi prompt, nút gửi sẽ đổi thành nút <code>Dừng</code>. Bấm nút này nếu muốn dừng queue.</p>
+        </section>
+
+        <section id="rewrite">
+          <h2>7. Dùng AI Rewrite</h2>
+          <p><code>AI rewrite</code> dùng Gemini API để viết lại prompt cho rõ ràng hơn, chi tiết hơn và phù hợp hơn với tạo ảnh.</p>
+          <p>Tính năng này không bắt buộc. Nếu không dùng <code>AI rewrite</code>, bạn vẫn gửi prompt tự động bình thường.</p>
+
+          <h3>Cài Gemini API Key</h3>
+          <ol>
+            <li>Mở <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">https://aistudio.google.com/app/apikey</a>.</li>
+            <li>Đăng nhập tài khoản Google.</li>
+            <li>Chọn <code>Create API key</code>.</li>
+            <li>Sao chép key bắt đầu bằng <code>AIzaSy...</code>.</li>
+            <li>Mở extension, bấm icon bánh răng.</li>
+            <li>Dán API Key vào ô <code>Gemini API Key</code>.</li>
+            <li>Bấm <code>Lưu cài đặt</code>.</li>
+          </ol>
+
+          <h3>Cách dùng</h3>
+          <ol>
+            <li>Nhập danh sách prompt vào ô <code>Danh sách prompt</code>.</li>
+            <li>Bấm <code>AI rewrite</code>.</li>
+            <li>Chờ AI xử lý.</li>
+            <li>Đọc lại prompt sau khi AI viết lại.</li>
+            <li>Nếu thấy ổn, bấm <code>Gửi vào labs.google</code>.</li>
+          </ol>
+        </section>
+
+        <section id="update">
+          <h2>8. Cập nhật hoặc gỡ extension</h2>
+
+          <h3>Cập nhật khi có bản mới</h3>
+          <ol>
+            <li>Giải nén file <code>TaoAnhAI.zip</code> mới.</li>
+            <li>Mở <code>chrome://extensions</code>.</li>
+            <li>Tìm extension <code>Tạo Ảnh AI</code>.</li>
+            <li>Bấm <code>Remove</code> hoặc <code>Gỡ</code> để gỡ bản cũ.</li>
+            <li>Bấm <code>Load unpacked</code>.</li>
+            <li>Chọn thư mục mới vừa giải nén.</li>
+            <li>Mở lại <code>labs.google</code> và dùng bình thường.</li>
+          </ol>
+
+          <h3>Gỡ extension</h3>
+          <ol>
+            <li>Mở <code>chrome://extensions</code>.</li>
+            <li>Tìm <code>Tạo Ảnh AI</code>.</li>
+            <li>Bấm <code>Remove</code> hoặc <code>Gỡ</code>.</li>
+            <li>Xác nhận gỡ.</li>
+          </ol>
+        </section>
+
+        <section id="errors">
+          <h2>9. Lỗi thường gặp và cách xử lý</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Vấn đề</th>
+                <th>Cách xử lý</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Không thấy extension sau khi cài</td>
+                <td>Kiểm tra đã chọn đúng thư mục có file <code>manifest.json</code> chưa.</td>
+              </tr>
+              <tr>
+                <td>Bấm icon nhưng không mở bảng điều khiển</td>
+                <td>Tải lại Chrome, hoặc vào <code>chrome://extensions</code> tắt rồi bật lại extension.</td>
+              </tr>
+              <tr>
+                <td>Extension báo không chạy trên trang hiện tại</td>
+                <td>Mở đúng trang <code>https://labs.google/</code>.</td>
+              </tr>
+              <tr>
+                <td>Không tìm thấy ô nhập prompt</td>
+                <td>Chờ trang tải xong, mở đúng màn hình có ô nhập prompt.</td>
+              </tr>
+              <tr>
+                <td>Prompt đã nhập nhưng không bấm được nút tạo</td>
+                <td>Tăng thời gian chờ lên <code>30s</code>, <code>45s</code> hoặc <code>60s</code>.</td>
+              </tr>
+              <tr>
+                <td>AI rewrite báo thiếu API Key</td>
+                <td>Vào cài đặt và nhập Gemini API Key.</td>
+              </tr>
+              <tr>
+                <td>AI rewrite báo lỗi</td>
+                <td>Kiểm tra API Key, quota Google AI Studio và kết nối mạng.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Lưu ý để dùng ổn định</h3>
+          <ul>
+            <li>Nên thử với 1 hoặc 2 prompt trước khi chạy số lượng lớn.</li>
+            <li>Không đóng tab <code>labs.google</code> khi extension đang chạy.</li>
+            <li>Không chuyển sang tab khác trong lúc đang gửi prompt.</li>
+            <li>Nếu gửi nhiều prompt, nên dùng thời gian chờ từ <code>30s</code> trở lên.</li>
+            <li>Sau khi dùng <code>AI rewrite</code>, nên đọc lại prompt trước khi gửi.</li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2>10. Liên hệ hỗ trợ</h2>
+          <p>Khi cần hỗ trợ, bạn nên gửi kèm ảnh chụp màn hình lỗi và mô tả bạn đang lỗi ở bước nào.</p>
+          <ul>
+            <li>Website: <a href="https://airender.vn" target="_blank" rel="noopener">https://airender.vn</a></li>
+            <li>Zalo: <a href="https://zalo.me/0896009111" target="_blank" rel="noopener">0896009111</a></li>
+            <li>Tác giả: <strong>Phạm Ngọc Tú</strong></li>
+            <li>Thương hiệu: <strong>airender.vn #airender</strong></li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <strong>Tạo Ảnh AI</strong><br>
+      Hướng dẫn cài đặt và sử dụng extension. Liên hệ hỗ trợ: <a href="https://zalo.me/0896009111" target="_blank" rel="noopener">0896009111</a>.
+    </footer>
+  </div>
+</body>
+</html>

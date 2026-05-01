@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Tạo Ảnh AI",
+  "short_name": "Tạo Ảnh AI",
+  "version": "1.0.0",
+  "description": "Bulk image prompt generator for labs.google by airender.vn #airender. Phạm Ngọc Tú, phone/zalo: 0896009111",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://labs.google/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Mở Tạo Ảnh AI"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content.ts-3_oinKNn.js"
+      ],
+      "matches": [
+        "https://labs.google/*"
+      ],
+      "all_frames": false,
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://labs.google/*"
+      ],
+      "resources": [
+        "assets/content.ts-3_oinKNn.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
