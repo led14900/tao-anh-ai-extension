@@ -297,15 +297,17 @@
       <nav aria-label="Mục lục">
         <p class="nav-title">Mục lục</p>
         <a href="#prepare">1. Chuẩn bị</a>
-        <a href="#install">2. Cài đặt</a>
-        <a href="#open">3. Mở labs.google</a>
-        <a href="#interface">4. Giao diện</a>
-        <a href="#prompt">5. Nhập prompt</a>
-        <a href="#batch">6. Gửi hàng loạt</a>
-        <a href="#rewrite">7. AI Rewrite</a>
-        <a href="#update">8. Cập nhật/Gỡ</a>
-        <a href="#errors">9. Lỗi thường gặp</a>
-        <a href="#contact">10. Hỗ trợ</a>
+        <a href="#github-download">2. Tải từ GitHub</a>
+        <a href="#install">3. Cài đặt</a>
+        <a href="#open">4. Mở labs.google</a>
+        <a href="#interface">5. Giao diện</a>
+        <a href="#prompt">6. Nhập prompt</a>
+        <a href="#batch">7. Gửi hàng loạt</a>
+        <a href="#rewrite">8. AI Rewrite</a>
+        <a href="#update">9. Cập nhật/Gỡ</a>
+        <a href="#errors">10. Lỗi thường gặp</a>
+        <a href="#maintainer">11. Đẩy lên GitHub</a>
+        <a href="#contact">12. Hỗ trợ</a>
       </nav>
 
       <main>
@@ -314,7 +316,7 @@
           <p>Trước khi cài đặt, hãy chuẩn bị các mục sau:</p>
           <ul>
             <li>Máy tính có cài Google Chrome.</li>
-            <li>File <code>TaoAnhAI.zip</code> được gửi kèm.</li>
+            <li>File <code>TaoAnhAI.zip</code> được gửi kèm, hoặc tải trực tiếp từ GitHub.</li>
             <li>Tài khoản Google có thể dùng trang <a href="https://labs.google/" target="_blank" rel="noopener">https://labs.google/</a>.</li>
             <li>Gemini API Key nếu muốn dùng tính năng <code>AI rewrite</code>. Nếu chỉ gửi prompt tự động thì không cần API Key.</li>
           </ul>
@@ -323,8 +325,28 @@
           </div>
         </section>
 
+        <section id="github-download">
+          <h2>2. Tải extension từ GitHub</h2>
+          <p>Nếu bạn nhận được link GitHub, hãy tải extension theo cách sau:</p>
+          <ol>
+            <li>Mở link <a href="https://github.com/led14900/tao-anh-ai-extension" target="_blank" rel="noopener">https://github.com/led14900/tao-anh-ai-extension</a>.</li>
+            <li>Bấm nút màu xanh <code>Code</code>.</li>
+            <li>Chọn <code>Download ZIP</code>.</li>
+            <li>Chờ Chrome tải file ZIP về máy.</li>
+            <li>Giải nén file ZIP vừa tải.</li>
+            <li>Mở thư mục vừa giải nén.</li>
+          </ol>
+          <div class="note">
+            Cách dễ nhất là tìm file <code>TaoAnhAI.zip</code> trong thư mục tải từ GitHub, giải nén file này, rồi nạp thư mục vừa giải nén vào Chrome.
+          </div>
+          <p>Nếu trong thư mục tải từ GitHub đã có file <code>manifest.json</code>, bạn cũng có thể nạp trực tiếp thư mục đó vào Chrome.</p>
+          <div class="warning">
+            <strong>Quan trọng:</strong> Chrome cần được chọn đúng thư mục có file <code>manifest.json</code>. Nếu chọn nhầm thư mục cha bên ngoài, extension sẽ không hiện lên.
+          </div>
+        </section>
+
         <section id="install">
-          <h2>2. Cài đặt extension vào Chrome</h2>
+          <h2>3. Cài đặt extension vào Chrome</h2>
 
           <h3>Bước 1: Giải nén file TaoAnhAI.zip</h3>
           <ol>
@@ -365,7 +387,7 @@
         </section>
 
         <section id="open">
-          <h2>3. Mở trang tạo ảnh</h2>
+          <h2>4. Mở trang tạo ảnh</h2>
           <ol>
             <li>Mở Chrome.</li>
             <li>Truy cập <a href="https://labs.google/" target="_blank" rel="noopener">https://labs.google/</a>.</li>
@@ -380,7 +402,7 @@
         </section>
 
         <section id="interface">
-          <h2>4. Các phần chính trong extension</h2>
+          <h2>5. Các phần chính trong extension</h2>
           <div class="quick-grid">
             <div class="box"><strong>Danh sách prompt</strong>Nơi nhập toàn bộ prompt muốn gửi.</div>
             <div class="box"><strong>AI rewrite</strong>Dùng AI để viết lại prompt rõ hơn.</div>
@@ -392,7 +414,7 @@
         </section>
 
         <section id="prompt">
-          <h2>5. Cách nhập prompt</h2>
+          <h2>6. Cách nhập prompt</h2>
 
           <h3>Cách 1: Mỗi dòng là một prompt</h3>
           <p>Cách này phù hợp khi prompt ngắn.</p>
@@ -418,7 +440,7 @@ Không khí ấm áp, phong cách ảnh điện ảnh</pre>
         </section>
 
         <section id="batch">
-          <h2>6. Gửi prompt hàng loạt</h2>
+          <h2>7. Gửi prompt hàng loạt</h2>
 
           <h3>Chọn số lần lặp</h3>
           <p>Mục <code>Mỗi prompt</code> cho biết mỗi prompt sẽ được gửi bao nhiêu lần.</p>
@@ -447,7 +469,7 @@ Không khí ấm áp, phong cách ảnh điện ảnh</pre>
         </section>
 
         <section id="rewrite">
-          <h2>7. Dùng AI Rewrite</h2>
+          <h2>8. Dùng AI Rewrite</h2>
           <p><code>AI rewrite</code> dùng Gemini API để viết lại prompt cho rõ ràng hơn, chi tiết hơn và phù hợp hơn với tạo ảnh.</p>
           <p>Tính năng này không bắt buộc. Nếu không dùng <code>AI rewrite</code>, bạn vẫn gửi prompt tự động bình thường.</p>
 
@@ -502,16 +524,24 @@ Không khí ấm áp, phong cách ảnh điện ảnh</pre>
         </section>
 
         <section id="update">
-          <h2>8. Cập nhật hoặc gỡ extension</h2>
+          <h2>9. Cập nhật hoặc gỡ extension</h2>
 
           <h3>Cập nhật khi có bản mới</h3>
+          <p>Nếu tải bản mới từ GitHub:</p>
           <ol>
-            <li>Giải nén file <code>TaoAnhAI.zip</code> mới.</li>
+            <li>Mở <a href="https://github.com/led14900/tao-anh-ai-extension" target="_blank" rel="noopener">https://github.com/led14900/tao-anh-ai-extension</a>.</li>
+            <li>Bấm <code>Code</code>.</li>
+            <li>Chọn <code>Download ZIP</code>.</li>
+            <li>Giải nén file ZIP vừa tải.</li>
+            <li>Nếu có file <code>TaoAnhAI.zip</code> bên trong, tiếp tục giải nén file <code>TaoAnhAI.zip</code>.</li>
+          </ol>
+          <p>Sau đó cập nhật trong Chrome:</p>
+          <ol>
             <li>Mở <code>chrome://extensions</code>.</li>
             <li>Tìm extension <code>Tạo Ảnh AI</code>.</li>
             <li>Bấm <code>Remove</code> hoặc <code>Gỡ</code> để gỡ bản cũ.</li>
             <li>Bấm <code>Load unpacked</code>.</li>
-            <li>Chọn thư mục mới vừa giải nén.</li>
+            <li>Chọn thư mục mới vừa giải nén có file <code>manifest.json</code>.</li>
             <li>Mở lại <code>labs.google</code> và dùng bình thường.</li>
           </ol>
 
@@ -525,7 +555,7 @@ Không khí ấm áp, phong cách ảnh điện ảnh</pre>
         </section>
 
         <section id="errors">
-          <h2>9. Lỗi thường gặp và cách xử lý</h2>
+          <h2>10. Lỗi thường gặp và cách xử lý</h2>
           <table>
             <thead>
               <tr>
@@ -575,8 +605,28 @@ Không khí ấm áp, phong cách ảnh điện ảnh</pre>
           </ul>
         </section>
 
+        <section id="maintainer">
+          <h2>11. Dành cho người quản lý: đẩy bản mới lên GitHub</h2>
+          <p>Phần này dành cho người quản lý extension. Người dùng thông thường không cần làm phần này.</p>
+          <p>Khi bạn đã có bản extension mới và muốn cập nhật lên GitHub:</p>
+          <ol>
+            <li>Mở thư mục <code>extension-github-release</code> trên máy.</li>
+            <li>Đảm bảo thư mục này chỉ chứa file extension public, không chứa toàn bộ dự án.</li>
+            <li>Kiểm tra trong thư mục có <code>manifest.json</code>, <code>index.html</code>, <code>assets/</code>, <code>TaoAnhAI.zip</code>, <code>HUONG_DAN_SU_DUNG.html</code>, <code>HUONG_DAN_SU_DUNG.md</code> và <code>README.md</code>.</li>
+            <li>Mở terminal tại thư mục <code>extension-github-release</code>.</li>
+            <li>Chạy <code>git status</code> để kiểm tra file thay đổi.</li>
+            <li>Chạy <code>git add .</code> để thêm file vào commit.</li>
+            <li>Chạy <code>git commit -m "Update extension release"</code> để tạo commit.</li>
+            <li>Chạy <code>git push</code> để đẩy lên GitHub.</li>
+          </ol>
+          <div class="warning">
+            <strong>Lưu ý:</strong> Không chạy các lệnh trên ở thư mục dự án gốc nếu thư mục đó có source nội bộ, database, <code>node_modules</code> hoặc file không muốn chia sẻ.
+          </div>
+          <p>Sau khi push xong, người dùng chỉ cần mở lại link GitHub và tải bản mới bằng nút <code>Code</code> &gt; <code>Download ZIP</code>.</p>
+        </section>
+
         <section id="contact">
-          <h2>10. Liên hệ hỗ trợ</h2>
+          <h2>12. Liên hệ hỗ trợ</h2>
           <p>Khi cần hỗ trợ, bạn nên gửi kèm ảnh chụp màn hình lỗi và mô tả bạn đang lỗi ở bước nào.</p>
           <ul>
             <li>Website: <a href="https://airender.vn" target="_blank" rel="noopener">https://airender.vn</a></li>
