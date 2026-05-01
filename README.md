@@ -1,6 +1,6 @@
 # Tạo Ảnh AI
 
-Đây là bản phát hành extension `Tạo Ảnh AI` dành cho người dùng cài vào Google Chrome.
+Extension tạo ảnh hàng loạt trên `labs.google` (Google Flow), dành cho người dùng cài vào Google Chrome.
 
 ## Cài đặt nhanh
 
