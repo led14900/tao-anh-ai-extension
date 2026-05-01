@@ -445,16 +445,45 @@ Không khí ấm áp, phong cách ảnh điện ảnh</pre>
           <p><code>AI rewrite</code> dùng Gemini API để viết lại prompt cho rõ ràng hơn, chi tiết hơn và phù hợp hơn với tạo ảnh.</p>
           <p>Tính năng này không bắt buộc. Nếu không dùng <code>AI rewrite</code>, bạn vẫn gửi prompt tự động bình thường.</p>
 
-          <h3>Cài Gemini API Key</h3>
+          <h3>Bước 1: Mở Google AI Studio</h3>
           <ol>
-            <li>Mở <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">https://aistudio.google.com/app/apikey</a>.</li>
-            <li>Đăng nhập tài khoản Google.</li>
-            <li>Chọn <code>Create API key</code>.</li>
-            <li>Sao chép key bắt đầu bằng <code>AIzaSy...</code>.</li>
-            <li>Mở extension, bấm icon bánh răng.</li>
+            <li>Mở Chrome.</li>
+            <li>Truy cập trang lấy API Key của Google AI Studio: <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">https://aistudio.google.com/app/apikey</a>.</li>
+            <li>Đăng nhập bằng tài khoản Google của bạn.</li>
+            <li>Nếu Google hỏi đồng ý điều khoản sử dụng, hãy đọc và bấm đồng ý để tiếp tục.</li>
+          </ol>
+
+          <h3>Bước 2: Tạo Gemini API Key</h3>
+          <ol>
+            <li>Sau khi vào trang API Key, tìm nút <code>Create API key</code>.</li>
+            <li>Bấm <code>Create API key</code>.</li>
+            <li>Nếu hệ thống hỏi chọn project, bạn có thể chọn một project có sẵn.</li>
+            <li>Nếu chưa có project, chọn tạo project mới hoặc để Google AI Studio tạo project tự động nếu có tùy chọn này.</li>
+            <li>Chờ vài giây để Google tạo key.</li>
+            <li>Khi key hiện ra, bấm nút copy để sao chép API Key.</li>
+          </ol>
+          <p>API Key thường bắt đầu bằng <code>AIzaSy...</code>.</p>
+
+          <h3>Bước 3: Lưu API Key cẩn thận</h3>
+          <ul>
+            <li>Không gửi API Key cho người khác.</li>
+            <li>Không đăng API Key công khai lên Facebook, Google Drive, GitHub hoặc website.</li>
+            <li>Nếu nghi ngờ key bị lộ, hãy vào Google AI Studio để xóa key cũ và tạo key mới.</li>
+            <li>Nếu Google báo key không dùng được, hãy tạo lại key mới và thử lại.</li>
+          </ul>
+
+          <h3>Bước 4: Dán API Key vào extension</h3>
+          <ol>
+            <li>Mở extension <code>Tạo Ảnh AI</code>.</li>
+            <li>Bấm icon bánh răng.</li>
             <li>Dán API Key vào ô <code>Gemini API Key</code>.</li>
             <li>Bấm <code>Lưu cài đặt</code>.</li>
           </ol>
+          <p>API Key được lưu trong Chrome trên máy của bạn. Extension chỉ dùng key này cho tính năng <code>AI rewrite</code>.</p>
+
+          <div class="note">
+            Nếu không thấy nút <code>Create API key</code>, hãy kiểm tra đã đăng nhập đúng tài khoản Google chưa, tải lại trang Google AI Studio, mở lại link API Key hoặc dùng tài khoản Google cá nhân nếu tài khoản công ty/trường học bị giới hạn quyền.
+          </div>
 
           <h3>Cách dùng</h3>
           <ol>

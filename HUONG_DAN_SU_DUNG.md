@@ -239,19 +239,41 @@ AI rewrite sẽ:
 
 Bạn chỉ cần làm phần này nếu muốn dùng nút `AI rewrite`.
 
-### Bước 1: Lấy API Key
+### Bước 1: Mở Google AI Studio
 
-1. Mở trang:
+1. Mở Chrome.
+2. Truy cập trang lấy API Key của Google AI Studio:
 
 ```text
 https://aistudio.google.com/app/apikey
 ```
 
-2. Đăng nhập tài khoản Google.
-3. Chọn `Create API key`.
-4. Sao chép key bắt đầu bằng `AIzaSy...`.
+3. Đăng nhập bằng tài khoản Google của bạn.
+4. Nếu Google hỏi đồng ý điều khoản sử dụng, hãy đọc và bấm đồng ý để tiếp tục.
 
-### Bước 2: Dán API Key vào extension
+### Bước 2: Tạo Gemini API Key
+
+1. Sau khi vào trang API Key, tìm nút `Create API key`.
+2. Bấm `Create API key`.
+3. Nếu hệ thống hỏi chọn project, bạn có thể chọn một project có sẵn.
+4. Nếu chưa có project, chọn tạo project mới hoặc để Google AI Studio tạo project tự động nếu có tùy chọn này.
+5. Chờ vài giây để Google tạo key.
+6. Khi key hiện ra, bấm nút copy để sao chép API Key.
+
+API Key thường bắt đầu bằng:
+
+```text
+AIzaSy...
+```
+
+### Bước 3: Lưu API Key cẩn thận
+
+- Không gửi API Key cho người khác.
+- Không đăng API Key công khai lên Facebook, Google Drive, GitHub hoặc website.
+- Nếu nghi ngờ key bị lộ, hãy vào Google AI Studio để xóa key cũ và tạo key mới.
+- Nếu Google báo key không dùng được, hãy tạo lại key mới và thử lại.
+
+### Bước 4: Dán API Key vào extension
 
 1. Mở extension `Tạo Ảnh AI`.
 2. Bấm icon bánh răng.
@@ -259,6 +281,13 @@ https://aistudio.google.com/app/apikey
 4. Bấm `Lưu cài đặt`.
 
 API Key được lưu trong Chrome trên máy của bạn. Extension chỉ dùng key này cho tính năng `AI rewrite`.
+
+Nếu không thấy nút `Create API key`, hãy thử:
+
+- Kiểm tra đã đăng nhập đúng tài khoản Google chưa.
+- Tải lại trang Google AI Studio.
+- Mở lại link `https://aistudio.google.com/app/apikey`.
+- Dùng tài khoản Google cá nhân thay vì tài khoản công ty/trường học nếu tài khoản đó bị giới hạn quyền.
 
 ## 13. Cách dùng AI Rewrite
 
