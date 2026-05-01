@@ -306,8 +306,7 @@
         <a href="#rewrite">8. AI Rewrite</a>
         <a href="#update">9. Cập nhật/Gỡ</a>
         <a href="#errors">10. Lỗi thường gặp</a>
-        <a href="#maintainer">11. Đẩy lên GitHub</a>
-        <a href="#contact">12. Hỗ trợ</a>
+        <a href="#contact">11. Hỗ trợ</a>
       </nav>
 
       <main>
@@ -605,28 +604,8 @@ Không khí ấm áp, phong cách ảnh điện ảnh</pre>
           </ul>
         </section>
 
-        <section id="maintainer">
-          <h2>11. Dành cho người quản lý: đẩy bản mới lên GitHub</h2>
-          <p>Phần này dành cho người quản lý extension. Người dùng thông thường không cần làm phần này.</p>
-          <p>Khi bạn đã có bản extension mới và muốn cập nhật lên GitHub:</p>
-          <ol>
-            <li>Mở thư mục <code>extension-github-release</code> trên máy.</li>
-            <li>Đảm bảo thư mục này chỉ chứa file extension public, không chứa toàn bộ dự án.</li>
-            <li>Kiểm tra trong thư mục có <code>manifest.json</code>, <code>index.html</code>, <code>assets/</code>, <code>TaoAnhAI.zip</code>, <code>HUONG_DAN_SU_DUNG.html</code>, <code>HUONG_DAN_SU_DUNG.md</code> và <code>README.md</code>.</li>
-            <li>Mở terminal tại thư mục <code>extension-github-release</code>.</li>
-            <li>Chạy <code>git status</code> để kiểm tra file thay đổi.</li>
-            <li>Chạy <code>git add .</code> để thêm file vào commit.</li>
-            <li>Chạy <code>git commit -m "Update extension release"</code> để tạo commit.</li>
-            <li>Chạy <code>git push</code> để đẩy lên GitHub.</li>
-          </ol>
-          <div class="warning">
-            <strong>Lưu ý:</strong> Không chạy các lệnh trên ở thư mục dự án gốc nếu thư mục đó có source nội bộ, database, <code>node_modules</code> hoặc file không muốn chia sẻ.
-          </div>
-          <p>Sau khi push xong, người dùng chỉ cần mở lại link GitHub và tải bản mới bằng nút <code>Code</code> &gt; <code>Download ZIP</code>.</p>
-        </section>
-
         <section id="contact">
-          <h2>12. Liên hệ hỗ trợ</h2>
+          <h2>11. Liên hệ hỗ trợ</h2>
           <p>Khi cần hỗ trợ, bạn nên gửi kèm ảnh chụp màn hình lỗi và mô tả bạn đang lỗi ở bước nào.</p>
           <ul>
             <li>Website: <a href="https://airender.vn" target="_blank" rel="noopener">https://airender.vn</a></li>

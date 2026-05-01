@@ -411,56 +411,7 @@ Extension cần một số quyền để hoạt động:
 
 Extension chỉ thao tác tự động trên `labs.google`.
 
-## 20. Dành cho người quản lý: đẩy bản mới lên GitHub
-
-Phần này dành cho người quản lý extension. Người dùng thông thường không cần làm phần này.
-
-Khi bạn đã có bản extension mới và muốn cập nhật lên GitHub:
-
-1. Mở thư mục `extension-github-release` trên máy.
-2. Đảm bảo thư mục này chỉ chứa file extension public, không chứa toàn bộ dự án.
-3. Kiểm tra trong thư mục có các file quan trọng:
-
-```text
-manifest.json
-index.html
-assets/
-TaoAnhAI.zip
-HUONG_DAN_SU_DUNG.html
-HUONG_DAN_SU_DUNG.md
-README.md
-```
-
-4. Mở terminal tại thư mục `extension-github-release`.
-5. Kiểm tra file thay đổi:
-
-```bash
-git status
-```
-
-6. Thêm file vào commit:
-
-```bash
-git add .
-```
-
-7. Tạo commit:
-
-```bash
-git commit -m "Update extension release"
-```
-
-8. Đẩy lên GitHub:
-
-```bash
-git push
-```
-
-Sau khi push xong, người dùng chỉ cần mở lại link GitHub và tải bản mới bằng nút `Code` > `Download ZIP`.
-
-Lưu ý: Không chạy các lệnh trên ở thư mục dự án gốc nếu thư mục đó có source nội bộ, database, `node_modules` hoặc file không muốn chia sẻ.
-
-## 21. Liên hệ hỗ trợ
+## 20. Liên hệ hỗ trợ
 
 Khi cần hỗ trợ, bạn nên gửi kèm:
 
