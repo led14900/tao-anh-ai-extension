@@ -225,7 +225,7 @@ Khi có bản mới:
 
 ## Liên Hệ
 
-- Website: `https://airender.vn`
+- Website: [airender.vn](https://airender.vn)
 - Zalo: `0896009111`
 - Tác giả: `Phạm Ngọc Tú`
-- Thương hiệu: `airender.vn #airender`
+- Thương hiệu: [airender.vn](https://airender.vn) #airender
