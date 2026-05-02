@@ -31,9 +31,9 @@ Nếu chọn sai thư mục, extension sẽ không hiện lên. Hãy chọn đú
 
 ## Chuẩn Bị Trước Khi Dùng
 
-- Mở trang `https://labs.google/`.
+- Mở trang `https://labs.google/fx/vi/tools/flow/`.
 - Đăng nhập tài khoản Google nếu được yêu cầu.
-- Mở đúng công cụ tạo ảnh hoặc trang Flow trong `labs.google`.
+- Mở đúng trang Google Flow tương thích nhất với extension.
 - Chờ trang tải xong và đảm bảo bạn nhìn thấy ô nhập prompt.
 - Bấm icon `Tạo Ảnh AI` trên Chrome để mở bảng điều khiển bên cạnh.
 
@@ -216,7 +216,7 @@ Khi có bản mới:
 |---|---|
 | Không thấy extension sau khi cài | Kiểm tra đã chọn đúng thư mục có file `manifest.json` chưa |
 | Bấm icon nhưng không mở bảng điều khiển | Tải lại Chrome, hoặc vào `chrome://extensions` tắt rồi bật lại extension |
-| Extension báo không chạy trên trang hiện tại | Mở đúng trang `https://labs.google/` |
+| Extension báo không chạy trên trang hiện tại | Mở đúng trang `https://labs.google/fx/vi/tools/flow/` |
 | Không tìm thấy ô nhập prompt | Chờ trang tải xong, mở đúng màn hình có ô nhập prompt |
 | Prompt đã nhập nhưng không bấm được nút tạo | Tăng thời gian chờ lên `30s`, `45s` hoặc `60s` |
 | Lượt đầu chạy được, lượt sau lỗi | Trang `labs.google` chưa xử lý xong lượt trước, hãy tăng thời gian chờ |
