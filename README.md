@@ -228,4 +228,4 @@ Khi có bản mới:
 - Website: [airender.vn](https://airender.vn)
 - Zalo: `0896009111`
 - Tác giả: `Phạm Ngọc Tú`
-- Thương hiệu: [airender.vn](https://airender.vn) #airender
+- Credit: [airender.vn](https://airender.vn) #airender
