@@ -4,6 +4,18 @@
 
 ---
 
+## Phiên bản 2.0 — Cải tiến ứng dụng
+
+- Tải ảnh hàng loạt có preflight trước khi chạy, tự cảnh báo khi chưa thấy ảnh hoặc vùng cuộn chưa phù hợp.
+- Tự nhớ ảnh đã tải theo từng Flow để lần chạy sau bỏ qua ảnh cũ và tải tiếp phần còn thiếu.
+- Tự retry khi tải ảnh lỗi tạm thời, ghi rõ ảnh lỗi trong báo cáo cuối.
+- Có nhật ký phiên cho prompt, tải ảnh, retry, lỗi và ảnh đã bỏ qua.
+- Hỗ trợ nhập/xuất danh sách prompt bằng file text.
+- Gợi ý safe delay cho queue prompt lớn để Flow có thời gian render ổn định hơn.
+- Có nút xóa Gemini API Key và xóa bộ nhớ ảnh đã tải của Flow hiện tại.
+
+---
+
 ## ✨ Extension này làm được gì?
 
 Khi bạn dùng **Google Labs Flow** để tạo ảnh bằng AI, thay vì phải:
@@ -154,6 +166,9 @@ cinematic color grade, ultra wide, travel photography
 > 🎯 **Hướng dẫn để tải hàng loạt CHÍNH XÁC NHẤT:**
 > - **Chế độ xem theo nhóm:** Hãy đảm bảo bạn đang ở chế độ xem theo nhóm (kích thước lưới nhỏ nhất S) trên Flow để extension dễ dàng quét ảnh.
 > - **Quét đến khi hết ảnh mới:** Extension không giới hạn theo số prompt đã gửi. Mỗi prompt trên Flow có thể tạo 1-4 ảnh, nên tool sẽ tiếp tục quét và tải ảnh kế tiếp cho đến khi không tìm thấy ảnh mới.
+> - **Có preflight trước khi chạy:** Extension sẽ kiểm tra nhanh xem Flow có ảnh đã render và vùng cuộn hợp lệ chưa.
+> - **Nhớ ảnh đã tải:** Extension lưu ID ảnh đã tải theo từng Flow để lần chạy sau tự bỏ qua ảnh cũ. Nếu muốn tải lại từ đầu, dùng nút **"Xóa nhớ ảnh đã tải của Flow hiện tại"**.
+> - **Tự retry khi lỗi tạm thời:** Nếu menu tải hoặc lựa chọn chất lượng bị chậm, extension sẽ tự thử lại trước khi báo lỗi.
 > - **Cuộn tới bức ảnh đầu tiên:** Vì danh sách ảnh của Google Labs là danh sách ảo (chỉ hiển thị một phần khi cuộn), extension sẽ quét và tải **từ trên xuống dưới**. Nếu bạn muốn tải toàn bộ, hãy **cuộn trang lên tận cùng (hoặc vị trí bức ảnh đầu tiên bạn muốn tải)** sao cho ảnh đầu tiên hiện trên màn hình rồi mới bấm "Tải hàng loạt".
 > - **Chờ load trang:** Cuộn nhẹ trang để đảm bảo các hình thu nhỏ (thumbnails) đã hiện lên ít nhất 1 phần trước khi bấm nút tải.
 > - **Để yên chuột & bàn phím:** Khi extension đang bắt đầu mở ảnh và tải, **TUYỆT ĐỐI KHÔNG** click chuột lung tung, không nhấn phím Escape hay mở tab khác đè lên. Việc này có thể làm gián đoạn luồng click tự động của extension.
