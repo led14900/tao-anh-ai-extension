@@ -1,0 +1,65 @@
+# ==========================================
+# CHỈ GIỮ CÁC FILE PHÂN PHỐI EXTENSION
+# ==========================================
+
+# Dependencies
+node_modules/
+
+# Build output folder (dùng dist/ để build local, không push)
+dist/
+*.tsbuildinfo
+
+# SOURCE CODE - Không đẩy lên public repo
+src/
+
+# Build config / Dev tooling
+package.json
+package-lock.json
+postcss.config.js
+tailwind.config.js
+vite.config.ts
+manifest.source.json
+tsconfig.json
+tsconfig.app.json
+tsconfig.node.json
+
+# Data dumps
+airendervn.sql
+
+# Folders not for public repo
+Image Gemini/
+temp-repo/
+extension-github-release/
+zip-contents-preview/
+
+# Internal dev docs
+AI_App_Spec_extension.md
+HUONG_DAN_SU_DUNG.html
+HUONG_DAN_SU_DUNG.md
+CHANGELOG.md
+
+# Archives - không cần zip nữa vì có file trực tiếp
+*.zip
+TaoAnhAI.zip
+
+# Testing infra
+playwright.config.ts
+playwright-artifacts/
+test-results/
+tests/
+test_*.cjs
+
+# Temp config / data
+flow_*.json
+
+# Gemini / Agent tooling
+.agents/
+skills/
+skills-lock.json
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
