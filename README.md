@@ -1,6 +1,6 @@
 # 🎨 Tạo Ảnh AI — Chrome Extension cho Google Labs Flow
 
-> **Tạo hàng loạt ảnh AI và tải về tự động** trên [labs.google](https://labs.google) — không cần code, không cần kỹ thuật.
+> **Tạo hàng loạt ảnh AI và tải về tự động thông minh** trên [labs.google](https://labs.google) — có preflight, tự retry, nhớ ảnh đã tải và nhật ký phiên.
 
 ---
 
@@ -24,7 +24,13 @@ Khi bạn dùng **Google Labs Flow** để tạo ảnh bằng AI, thay vì phả
 
 Extension này giúp bạn:
 - ✅ **Nhập nhiều prompt cùng lúc** — chạy từng cái một tự động
-- ✅ **Tự động tải toàn bộ ảnh** đã render về máy (1K / 2K / 4K)
+- ✅ **Tự động tải toàn bộ ảnh** đã render về máy (1K / 2K / 4K) — quét đến khi hết ảnh mới, không phụ thuộc số prompt
+- ✅ **Preflight trước khi tải hàng loạt** — kiểm tra nhanh gallery, ảnh đã render và vùng cuộn
+- ✅ **Nhớ ảnh đã tải theo từng Flow** — chạy lại sẽ bỏ qua ảnh cũ và tải tiếp phần còn thiếu
+- ✅ **Tự retry lỗi tải tạm thời** — giảm sót ảnh khi menu tải hoặc mạng phản hồi chậm
+- ✅ **Nhật ký phiên** — ghi lại prompt đã gửi, ảnh đã tải, ảnh bỏ qua, retry và lỗi
+- ✅ **Nhập/xuất prompt bằng file text** — dễ lưu queue prompt để dùng lại
+- ✅ **Safe delay cho queue lớn** — gợi ý tăng thời gian chờ để Flow render ổn định hơn
 - ✅ Hiển thị **tiến trình trực tiếp** ngay trên giao diện
 - ✅ Hoạt động qua **Side Panel** của Chrome — không cản giao diện Flow
 
